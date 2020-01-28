@@ -16,6 +16,7 @@
 I usually include this single script in with any enterprise wide reports to get an idea of the SQL Edition, Service Pack, and Version numbers. You could also insert this into a an auditing table to check your versioning over a period of time. I might write up some logic later on to include all that.
   
 ---
+# SQL-Logic
 ```SQL
 use master; select cast(serverproperty('edition') as varchar(50)) + ' ' + cast(serverproperty('productlevel') as varchar(50)) + ' ' + cast(serverproperty('productversion') as varchar(50)) as 'SQL Server Version Info'
 ```
